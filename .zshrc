@@ -66,6 +66,9 @@ kterm*|xterm*)
 esac
 
 # プロンプトの設定
+autoload colors
+colors
+setopt prompt_subst 
 PROMPT="[%n] %(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 # プロンプト指定(コマンドの続き)
 PROMPT2='[%n]> '
@@ -73,9 +76,6 @@ PROMPT2='[%n]> '
 SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
 RPROMPT=$'[ `branch-status-check`%~ ]'
 
-autoload colors
-colors
-setopt prompt_subst 
 
 function branch-status-check {
     local prefix branchname suffix
