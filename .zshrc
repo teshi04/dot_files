@@ -11,9 +11,6 @@ alias gd='git diff --color'
 alias ippei='curl https://gist.githubusercontent.com/dameninngenn/5865715/raw/timer.pl | perl - --color=green'
 alias homo='curl https://gist.githubusercontent.com/s-aska/9268689/raw/26d81dbe17fbd8cfc3984eca6848ced0cf3293bd/homo.pl | perl'
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # OSによってlsオプションを分ける
 case "${OSTYPE}" in
 darwin*)
