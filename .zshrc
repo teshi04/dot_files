@@ -5,6 +5,7 @@ alias rm='rm -i'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gb='git branch'
 alias gl='git log --color'
 alias gd='git diff --color'
 
