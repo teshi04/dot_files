@@ -23,6 +23,9 @@ linux*)
    ;;
 esac
 
+# /usr/bin より /usr/local/bin を優先する
+export PATH=/usr/local/bin:$PATH
+
 # 日本語
 export LANG=ja_JP.UTF-8
 
