@@ -26,6 +26,8 @@ esac
 # /usr/bin より /usr/local/bin を優先する
 export PATH=/usr/local/bin:$PATH
 
+export EDITOR=/usr/local/bin/vim
+
 # 日本語
 export LANG=ja_JP.UTF-8
 
@@ -135,5 +137,7 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+# おまじない
+bindkey -e
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
