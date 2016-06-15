@@ -8,6 +8,7 @@ alias gc='git commit'
 alias gb='git branch'
 alias gl='git log --color'
 alias gd='git diff --color'
+alias gpf='git push --force-with-lease'
 
 alias ippei='curl https://gist.githubusercontent.com/dameninngenn/5865715/raw/timer.pl | perl - --color=green'
 alias homo='curl https://gist.githubusercontent.com/s-aska/9268689/raw/26d81dbe17fbd8cfc3984eca6848ced0cf3293bd/homo.pl | perl'
@@ -25,6 +26,10 @@ esac
 
 # 日本語
 export LANG=ja_JP.UTF-8
+
+bindkey -e
+
+export EDITOR=/usr/bin/vim
 
 # 補完機能
 autoload -U compinit
@@ -70,11 +75,11 @@ esac
 autoload colors
 colors
 setopt prompt_subst 
-PROMPT="[%n] %(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
+PROMPT="[%n] %(?.%{$fg[green]%}.%{$fg[blue]%})%(?!😃  <!😇  ? <)%{${reset_color}%} "
 # プロンプト指定(コマンドの続き)
 PROMPT2='[%n]> '
 # もしかして時のプロンプト指定
-SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
+SPROMPT="%{$fg[red]%}%{$suggest%}😉  ? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
 RPROMPT=$'[ `branch-status-check`%~ ]'
 
 
